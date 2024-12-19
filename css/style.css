@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body{
+    background-color: #0B266F;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    margin: 1rem 0 3rem;
+    font-size: 2.5rem;
+}
+
+.contenedor{
+    padding: 2rem;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 1rem 3rem;
+    font-weight: 500;
+}
+
+/*Boton 1*/
+
+.btn-1{
+    border: 3px solid #18F293;
+    overflow: hidden;
+    letter-spacing: 10px;
+}
+
+.btn-1::before{
+    content: "";
+    position: absolute;
+    background-color: #18F293;
+    width: 100%;
+    height: 200%;
+    border-radius: 50%;
+    top: -200%;
+    left: 0%;
+    transition: all .6s ease-in;
+    z-index: -1;
+}
+
+
+.btn-1:hover::before{
+    top: 0;
+    border-radius: 0;
+}
+
+/* Boton 2 */
+
+.btn-2{
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    border-radius: 3rem;
+    border: none;
+    letter-spacing: 6px;
+    font-size: 1.1rem;
+    animation: movimiento 5s infinite;
+}
+
+@keyframes movimiento{
+    0%{
+        transform: rotateZ(-8deg);
+        box-shadow: -2px 2px 8px rgba(227, 169, 168, 0.5); /* Sombra abajo a la derecha */
+        
+    }
+    55%{
+        transform: rotateZ(8deg);        
+        box-shadow: 2px 2px 8px rgba(15, 171, 233, 0.5); /* Sombra abajo a la derecha */
+
+    }
+    100%{
+        transform: rotateZ(-8deg);
+        box-shadow: -2px 2px 8px rgba(227, 169, 168, 0.5); /* Sombra abajo a la derecha */
+
+    }
+}
+
+/*Boton 3*/
+
+.btn-3{
+    background-color: #2E798A;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    animation: pulso 1.5s infinite;
+
+}
+
+@keyframes pulso {
+    0%{
+        transform: scale(.99);
+        box-shadow:  0 0 0 0 rgba(256, 256, 256, .1);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow:  0 0 0 25px rgba(256, 256, 256, 0);
+    }
+    100%{
+        transform: scale(.99);
+        box-shadow:  0 0 0 0 rgba(256, 256, 256, 0);
+    }
+
+
+}
+
+/*Boton 4*/
+
+.btn-4{
+    border-color: #18F293;
+    border-width: 0 3px;
+    border-style: solid;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.btn-4::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #18F293;
+    top: 110%;
+    left: 0%;
+    z-index: -1;
+    transition: all .3s ease-out;
+}
+
+
+.btn-4:hover::before{
+    top: 0%;
+}
+
+/*Boton 5*/
+
+.btn-5{
+    border-color: #3ec2ff;
+    border-width: 0 3px;
+    border-style: solid;
+    z-index: 10;
+    overflow: hidden;
+    transition: all .4s ease-out;
+}
+
+.btn-5:hover{
+    background-color: #3ec2ff2d;
+}
+
+.btn-5::before{
+    content: "";
+    position: absolute;
+    background-color:#3ec2ff ;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: -100%;
+    transition: all .3s ease-out;
+}
+
+.btn-5:hover::before{
+    left: 0%;
+}
+
+.btn-5::after{
+    content: "";
+    position: absolute;
+    background-color:#3ec2ff ;
+    width: 100%;
+    height: 3px;
+    top: 95%;
+    left: 100%;
+    transition: all .3s ease-out;
+}
+
+.btn-5:hover::after{
+    left: 0%;
+}
+
+/*Boton 6*/
+
+.btn-6::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); ;
+    background-size: 200%;
+    border-radius: .5rem;
+    transition: all .5s ease-out;
+    z-index: -1;
+}
+
+.btn-6:hover::after{
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.btn-6::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); ;
+    background-size: 200%;
+    border-radius: .5rem;
+    z-index: -1;
+}
+
+.btn-6:hover::before{
+    background-position: 100%;
+}
