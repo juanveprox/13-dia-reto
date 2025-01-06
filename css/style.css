@@ -1,5 +1,4 @@
 *{
-    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", serif;
@@ -17,8 +16,9 @@ h1{
 }
 
 .contenedor{
-    padding: 2rem;
-    display: flex;
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
     gap: 4rem;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -32,6 +32,7 @@ h1{
     position: relative;
     padding: 1rem 3rem;
     font-weight: 500;
+    text-align: center;
 }
 
 /*Boton 1*/
@@ -39,11 +40,11 @@ h1{
 .btn-1{
     border: 3px solid #18F293;
     overflow: hidden;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 .btn-1::before{
-    content: "";
+    content:"";
     position: absolute;
     background-color: #18F293;
     width: 100%;
@@ -226,3 +227,55 @@ h1{
 .btn-6:hover::before{
     background-position: 100%;
 }
+
+/* Boton 7*/
+.btn-7{
+    background-color: #090C02;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 14px #06080183;
+    position: relative;
+    height: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.btn-7__p{
+    background-color:  #090C02;
+    width: 95%;
+    padding: .8rem 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+.btn-7::before{
+    content:"";
+    position: absolute;
+    width: 11.5rem;
+    height: 5rem;
+    top: -10%;
+    left: -5%;
+    background-image: conic-gradient(rgb(9, 255, 0) 20deg, transparent 120deg);
+    animation: giro 3s linear infinite;
+    z-index: 10;
+    
+    box-shadow:inset 6px 6px 14px #06080183;
+}
+
+@keyframes giro{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+
